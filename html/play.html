@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ game }}</title>
+</head>
+
+<body>
+<h1>Select Your Throw:</h1>
+<form action="/{{id}}" method="post">
+    {% for option in throws %}
+    <label>
+        <input type="radio" name="playerThrow" value="{{option}}"/>{{option}}
+    </label>
+    <br>
+    {% endfor %}
+    <br><br>
+    <input type="submit">
+</form>
+
+</body>
+
+</html>

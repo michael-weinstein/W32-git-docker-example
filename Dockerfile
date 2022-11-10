@@ -8,8 +8,10 @@ RUN pip3 install -r /opt/requirements.txt
 
 RUN mkdir /opt/rps
 
-COPY main.py /opt/rps
+COPY *.py /opt/rps/
 
 COPY rpsSupport/ /opt/rps/rpsSupport
 
-CMD ["python3", "/opt/rps/main.py"]
+EXPOSE 44444
+
+CMD ["python3", "/opt/rps/web.py"]
