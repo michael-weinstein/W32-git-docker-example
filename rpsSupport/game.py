@@ -29,7 +29,7 @@ def getComputerThrow(winTable:typing.Dict[str, str]) -> str:
     return random.choice(possibleThrows)
 
 
-def playARound(winTable:typing.Dict[str, str]) -> str:
+def playARound(winTable:typing.Dict[str, str]) -> typing.Tuple[str, str]:
     computerThrow = getComputerThrow(winTable)
     playerThrow = getPlayerThrow(winTable)
     return determineOutcome(winTable, computerThrow, playerThrow)
